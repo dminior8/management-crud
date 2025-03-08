@@ -42,11 +42,11 @@ public class CategoryPriceValidator implements ConstraintValidator<ValidCategory
     private String getPriceRange(String category) {
         switch (category.toLowerCase()) {
             case "elektronika":
-                return "50 - 50 000 PLN";
+                return "50 - 50000 PLN";
             case "książki":
                 return "5 - 500 PLN";
             case "odzież":
-                return "10 - 5 000 PLN";
+                return "10 - 5000 PLN";
             default:
                 return "Nieznana kategoria";
         }

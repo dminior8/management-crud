@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.dminior.management_crud.repository.ProductHistoryRepository;
 import pl.dminior.management_crud.repository.ProductRepository;
-//import pl.dminior.management_crud.validation.ProductValidator;
 import pl.dminior.management_crud.validation.ProductNameValidator;
 import pl.dminior.management_crud.web.model.Product;
 import pl.dminior.management_crud.web.model.ProductHistory;
