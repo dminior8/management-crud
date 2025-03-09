@@ -18,11 +18,11 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<List<Product>> getAllProducts() {
-        List<Product> projects = productService.getAllProjects();
-        if (projects.isEmpty()) {
+        List<Product> products = productService.getAllProducts();
+        if (products.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.ok(projects);
+        return ResponseEntity.ok(products);
     }
 
     @GetMapping("/{id}")
@@ -34,8 +34,8 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@Valid @RequestBody Product product) {
-        Product createdProject = productService.createProduct(product);
-        return ResponseEntity.status(201).body(createdProject);
+        Product createdProduct = productService.createProduct(product);
+        return ResponseEntity.status(201).body(createdProduct);
     }
 
     @PatchMapping("/{id}")

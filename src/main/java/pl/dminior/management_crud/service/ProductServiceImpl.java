@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService {
     private final ProductNameValidator productNameValidator;
 
     @Override
-    public List<Product> getAllProjects() {
+    public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
 
@@ -69,9 +69,9 @@ public class ProductServiceImpl implements ProductService {
                             ? existingProduct.getCategory() : product.getCategory());
             existingProduct.setCreatedAt(Timestamp.from(Instant.now()));
 
-            Product updatedProject = productRepository.save(existingProduct);
+            Product updatedProduct = productRepository.save(existingProduct);
 
-            return Optional.of(updatedProject);
+            return Optional.of(updatedProduct);
         }
         return Optional.empty();
     }
